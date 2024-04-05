@@ -1,0 +1,105 @@
+.carrousel {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.carrousel__cover__img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 25px;
+}
+
+.arrow--active {
+  display: flex;
+}
+.arrow--inactive {
+  display: none;
+}
+
+.prev.arrow--active {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
+  background-color: transparent;
+  background-image: url("../../assets/pictures/leftArrow.png");
+  border: none;
+  background-size: cover;
+  width: 45px;
+  height: 80px;
+}
+
+.next.arrow--active {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: transparent;
+  background-image: url("../../assets/pictures/rightArrow.png");
+  border: none;
+  background-size: cover;
+  width: 45px;
+  height: 80px;
+}
+
+.counter {
+  display: flex;
+  align-items: flex-end;
+  bottom: 5px;
+  font-size: 18px;
+  right: 50%;
+  transform: translate(50%);
+  height: 100%;
+  position: absolute;
+  color: white;
+}
+
+.counter--hidden {
+  display: none;
+}
+@media (max-width: 1240px) {
+  .carrousel {
+    height: 415px;
+  }
+
+  .carrousel__cover__img {
+    border-radius: 10px;
+  }
+  .prev.arrow--active {
+    width: 24px;
+    height: 40px;
+  }
+  .next.arrow--active {
+    width: 24px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .prev.arrow--active {
+    width: 12px;
+    height: 20px;
+  }
+  .next.arrow--active {
+    width: 12px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carrousel {
+    border-radius: 15px;
+    height: 255px;
+  }
+}

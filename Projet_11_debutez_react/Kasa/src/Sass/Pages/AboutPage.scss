@@ -1,0 +1,11 @@
+.AboutPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 425px) {
+  .AboutPage {
+    width: 100%;
+  }
+}

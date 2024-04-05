@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 0;
+}
+
+header.container {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 425px) {
+  .logo__container {
+    max-width: 40%;
+  }
+  .logo {
+    width: 100%;
+  }
+  .container {
+    margin: 0;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin: 0;
+    font-size: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+}
