@@ -1,0 +1,42 @@
+.radarContainer {
+    display: flex;
+    background: #282d30;
+    border-radius: 5px;
+    max-width: 31%;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0 10px;
+  }
+  
+  .radarChart {
+    display: flex;
+    font-size: 1.2vh;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    max-width: none !important;
+  }
+  
+  .axis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recharts-polar-angle-axis-tick {
+    & text {
+      fill: #ffffff;
+      & tspan {
+        text-align: right;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+      }
+    }
+  }
