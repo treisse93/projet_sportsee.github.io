@@ -40,17 +40,7 @@ export default function Dashboard({ id }) {
       formatedKeyData,
     } = profil;
 
-    // Modifier la propriété formatedKeyData pour utiliser des nombres au lieu de chaînes de caractères
-    const updatedFormatedKeyData = formatedKeyData.map((item) => ({
-      ...item,
-      value: parseFloat(item.value), // Convertir la valeur en nombre
-    }));
-
-    // Créer un nouvel objet profil avec la propriété formatedKeyData mise à jour
-    const updatedProfil = {
-      ...profil,
-      formatedKeyData: updatedFormatedKeyData,
-    };
+    console.log(formatedKeyData);
 
     return (
       <div className="dashboardContainer">
@@ -72,7 +62,7 @@ export default function Dashboard({ id }) {
             width="30%"
             height="100%"
           >
-            <KeyDatasComponent data={updatedFormatedKeyData} />
+            <KeyDatasComponent data={formatedKeyData} />
           </ResponsiveContainer>
         </section>
       </div>

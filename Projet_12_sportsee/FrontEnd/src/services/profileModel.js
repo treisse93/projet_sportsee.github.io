@@ -26,16 +26,36 @@ export default class ProfileModel {
 
     // Méthode pour formater la valeur des calories
     const formatCalories = (calorieCount) => {
-      // Convertir la valeur en nombre
-      const calorieValue = parseInt(calorieCount);
-      // Formater la valeur avec la virgule pour les milliers
-      const formattedValue = calorieValue.toLocaleString("en-US");
+      // Convertir la valeur en nombre à virgule flottante
+      const calorieValue = parseFloat(calorieCount);
+    
+      // Formater la valeur en utilisant une virgule comme séparateur de milliers
+      const formattedValue = calorieValue.toLocaleString("fr-FR", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      });
+    
+      // Remplacer les espaces insécables par des espaces normaux
+      const formattedValueWithSpace = formattedValue.replace(/\u202F/g, ",");
+    
       // Retourner la valeur formatée avec l'unité
-      return `${formattedValue}`;
+      return formattedValueWithSpace;
     };
+    
+    
+    
+    
+    
+    
 
     //récupération des KeyData
     this.keyData = userDatas[0].keyData;
+    console.log(
+      "Valeur de calorieCount avant le formatage :",
+      this.keyData.calorieCount
+    );
+
+    console.log("Valeur de calorieCount :", userDatas[0].keyData.calorieCount);
 
     this.formatedKeyData = [
       {
