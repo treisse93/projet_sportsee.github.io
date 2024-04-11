@@ -12,7 +12,7 @@ import "../../sass/Components/Dashboard/Dashboard.scss";
 
 export default function Dashboard({ id }) {
   const type = "mock";
-  const [profil, setProfil] = useState("");
+  const [profil, setProfil] = useState({});
 
   useEffect(() => {
     async function fetchData() {
@@ -30,22 +30,24 @@ export default function Dashboard({ id }) {
     fetchData();
   }, [id, type]);
 
-  const {
-    sessionsAverage,
-    sessionsTracking,
-    formatedKeyData,
-    score,
-    firstName,
-    formatedActivities,
-  } = profil;
+  if (profil && profil.firstName) {
+    const {
+      sessionsAverage,
+      sessionsTracking,
+      score,
+      firstName,
+      formatedActivities,
+      formatedKeyData,
+    } = profil;
 
-  if (profil) {
     return (
       <div className="dashboardContainer">
         <WelcomeContainer firstName={firstName} dataType={type} />
         <section className="viewStats">
           <div className="viewStatsGraphs">
-            <BarChartContainer activities={sessionsTracking} />
+            {sessionsTracking && (
+              <BarChartContainer activities={sessionsTracking} />
+            )}
             <div className="viewStatsGraphsDown">
               <LineChartComponent data={sessionsAverage} />
 
@@ -64,9 +66,12 @@ export default function Dashboard({ id }) {
       </div>
     );
   } else {
-    <p className="loading">
-      Une erreur est survenue, les données d&apos;utilisation sont inacessibles
-    </p>;
+    return (
+      <p className="loading">
+        Une erreur est survenue, les données d&apos;utilisation sont
+        inacessibles
+      </p>
+    );
   }
 }
 

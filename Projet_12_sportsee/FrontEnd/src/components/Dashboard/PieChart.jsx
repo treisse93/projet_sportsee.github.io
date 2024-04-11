@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { PieChart, ResponsiveContainer, Pie, Label, Legend } from "recharts";
 import "../../sass/Components/Dashboard/PieChart.scss";
 import PropTypes from "prop-types";

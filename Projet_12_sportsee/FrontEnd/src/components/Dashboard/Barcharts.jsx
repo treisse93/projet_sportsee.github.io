@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import "../../sass/Components/Dashboard/Barcharts.scss";
 import PropTypes from "prop-types";
 import {

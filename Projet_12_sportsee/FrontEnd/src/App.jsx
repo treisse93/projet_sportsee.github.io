@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import ProfilePage from "./pages/ProfilePage/ProfilePage.jsx";
 import HomePage from "./pages/HomePage/HomePage.jsx";

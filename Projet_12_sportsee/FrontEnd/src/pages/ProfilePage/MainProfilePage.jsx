@@ -1,3 +1,4 @@
+import React from "react";
 import "../../sass/Layout/MainProfilePage.scss";
 import Vertical from "../../components/Vertical/Vertical";
 import Dashboard from "../../components/Dashboard/Dashboard";

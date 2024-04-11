@@ -1,3 +1,4 @@
+import React from "react";
 import Header from "../../components/Header/Header.jsx";
 import "../../sass/Pages/ProfilePage.scss";
 import { Navigate, useParams } from "react-router-dom";

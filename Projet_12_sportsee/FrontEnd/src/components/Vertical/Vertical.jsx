@@ -1,3 +1,4 @@
+import React from "react";
 import "../../sass/Components/Vertical/Vertical.scss";
 import yoga from "../../assets/yoga.svg";
 import musculation from "../../assets/musculation.svg";
