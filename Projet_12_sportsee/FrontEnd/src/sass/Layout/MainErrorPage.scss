@@ -1,0 +1,38 @@
+.errorPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+  }
+  
+  .errorPage__Title {
+    display: flex;
+    margin: 20px;
+    align-items: baseline;
+    color: white;
+  }
+  
+  .eerrorPage__Type {
+    color: red;
+    font-size: 320%;
+    margin-left: 20px;
+  }
+  
+  .errorPage__Text {
+    color: white;
+  }
+  
+  .errorPage--Link {
+    display: flex;
+    text-decoration: none;
+    color: red;
+    font-family: "Roboto", sans-serif;
+    font-weight: 550;
+    margin: 60px 20px 20px 20px;
+    text-align: center;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background: lightgrey;
+  }
