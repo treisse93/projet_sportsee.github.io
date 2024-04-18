@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "../../sass/Components/Header/Logo.scss";
 import img from "../../assets/logo.svg";
 
