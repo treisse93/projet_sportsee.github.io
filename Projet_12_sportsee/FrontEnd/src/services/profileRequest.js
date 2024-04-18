@@ -27,7 +27,7 @@ export default async function getProfile(id, source) {
 
   let Datas;
 
-  if (source === "mock") {
+  if (source === null) {
     const userMainData = correctedData.find((user) => user.id === Number(id));
     const userActivity = USER_ACTIVITY.find(
       (activity) => activity.userId === Number(id)

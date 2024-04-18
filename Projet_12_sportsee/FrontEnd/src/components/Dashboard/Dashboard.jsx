@@ -42,6 +42,11 @@ export default function Dashboard({ id }) {
 
     console.log(formatedKeyData);
 
+    if (formatedKeyData.length > 0) {
+      const firstDataItem = formatedKeyData[0];
+      firstDataItem.value = parseFloat(firstDataItem.value.replace(",", ""));
+    }
+
     return (
       <div className="dashboardContainer">
         <WelcomeContainer firstName={firstName} dataType={type} />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../sass/Components/Dashboard/KeyDatasComponent.scss";
 import PropTypes from "prop-types";
 
@@ -15,7 +15,15 @@ export default function KeyDatasComponent({ data }) {
                 alt={`${keyData.type} icone`}
               />
               <div className="keyDataTextContainer">
-                <p className="keyDataValue">{keyData.value + keyData.unit}</p>
+                <p className="keyDataValue">
+                  {/* Formater la valeur avec la virgule comme séparateur de milliers */}
+                  {typeof keyData.value === "string"
+                    ? parseFloat(
+                        keyData.value.replace(",", ",")
+                      ).toLocaleString()
+                    : keyData.value.toLocaleString()}{" "}
+                  {keyData.unit}
+                </p>
                 <p className="keyDataName">
                   {keyData.type === "caloriesCount"
                     ? "Calories"
