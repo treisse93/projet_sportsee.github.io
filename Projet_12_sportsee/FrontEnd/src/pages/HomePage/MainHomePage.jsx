@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { USER_MAIN_DATA } from "../../mockDatas/data.jsx";
 
+/**
+ * Composant représentant la partie principale de la page d'accueil
+ * @returns {JSX.Element} Composant de la partie principale de la page d'accueil
+ */
+
 export default function MainHomePage() {
   const [userData, setUserData] = useState([]);
 
@@ -24,3 +29,5 @@ export default function MainHomePage() {
     </div>
   );
 }
+
+MainHomePage.propTypes = {};

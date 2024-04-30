@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import "../../sass/Layout/MainErrorPage.scss";
 
+/**
+ * Composant représentant la page d'erreur principale
+ * @returns {JSX.Element} Composant de la page MainErrorPage
+ */
 export default function MainErrorPage() {
   return (
     <div className="errorPage">
@@ -17,3 +21,5 @@ export default function MainErrorPage() {
     </div>
   );
 }
+
+MainErrorPage.propTypes = {};

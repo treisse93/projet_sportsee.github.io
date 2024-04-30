@@ -4,6 +4,11 @@ import "../../sass/Pages/ProfilePage.scss";
 import { Navigate, useParams } from "react-router-dom";
 import MainProfile from "./MainProfilePage.jsx";
 
+/**
+ * Composant représentant la page de profil utilisateur
+ * @returns {JSX.Element} Composant de la page de profil utilisateur
+ */
+
 export default function ProfilePage() {
   const { id } = useParams("id");
   const AvailableIds = [12, 18];
@@ -21,3 +26,5 @@ export default function ProfilePage() {
     </div>
   );
 }
+
+ProfilePage.propTypes = {};
