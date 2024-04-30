@@ -6,6 +6,12 @@ import {
   USER_PERFORMANCE,
 } from "../mockDatas/data.jsx";
 
+/**
+ * Fonction pour corriger les clés 'todayScore' en 'score'
+ * @param {Array<Object>} data - Les données à corriger
+ * @returns {Array<Object>} - Les données corrigées
+ */
+
 // Fonction pour corriger les clés 'todayScore' en 'score'
 function fixScoreKey(data) {
   return data.map((item) => {
@@ -21,6 +27,13 @@ function fixScoreKey(data) {
 
 // Appliquer la correction sur USER_MAIN_DATA
 const correctedData = fixScoreKey(USER_MAIN_DATA);
+
+/**
+ * Fonction pour récupérer le profil utilisateur
+ * @param {number} id - L'identifiant de l'utilisateur
+ * @param {string} source - La source des données ('null' pour api, 'mock' pour le mock)
+ * @returns {Promise<ProfileModel>} - Une promesse contenant le modèle de profil utilisateur
+ */
 
 export default async function getProfile(id, source) {
   // appelle toutes les fonctions d'api et du mockDatas

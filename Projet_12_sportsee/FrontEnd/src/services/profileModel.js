@@ -3,7 +3,15 @@ import caloriesIcon from "../assets/calories-icon.svg";
 import proteinsIcon from "../assets/protein-icon.svg";
 import fatIcon from "../assets/fat-icon.svg";
 
+/**
+ * Modèle représentant le profil utilisateur
+ */
 export default class ProfileModel {
+  /**
+   * Constructeur de la classe ProfileModel
+   * @param {number} id - L'identifiant de l'utilisateur
+   * @param {Array<Object>} userDatas - Les données de l'utilisateur
+   */
   constructor(id, userDatas) {
     //récupération des informations perso
 
@@ -24,29 +32,27 @@ export default class ProfileModel {
     ];
     this.score.push({ name: "score", value: 0 });
 
-    // Méthode pour formater la valeur des calories
+    /**
+     * Méthode pour formater la valeur des calories
+     * @param {number} calorieCount - Le nombre de calories à formater
+     * @returns {string} - La valeur des calories formatée
+     */
     const formatCalories = (calorieCount) => {
       // Convertir la valeur en nombre à virgule flottante
       const calorieValue = parseFloat(calorieCount);
-    
+
       // Formater la valeur en utilisant une virgule comme séparateur de milliers
       const formattedValue = calorieValue.toLocaleString("fr-FR", {
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
       });
-    
+
       // Remplacer les espaces insécables par des espaces normaux
       const formattedValueWithSpace = formattedValue.replace(/\u202F/g, ",");
-    
+
       // Retourner la valeur formatée avec l'unité
       return formattedValueWithSpace;
     };
-    
-    
-    
-    
-    
-    
 
     //récupération des KeyData
     this.keyData = userDatas[0].keyData;
