@@ -3,6 +3,14 @@ import { PieChart, ResponsiveContainer, Pie, Label, Legend } from "recharts";
 import "../../sass/Components/Dashboard/PieChart.scss";
 import PropTypes from "prop-types";
 
+/**
+ * Composant du graphique en secteurs (camembert).
+ *
+ * @param {Object} props - Les propriétés du composant.
+ * @param {Array} props.data - Les données à afficher dans le graphique.
+ * @returns {JSX.Element} Le composant du graphique en secteurs.
+ */
+
 export default function PieChartComponent({ data }) {
   if (!data || !data.length) {
     return <div>No data available</div>;
@@ -10,9 +18,21 @@ export default function PieChartComponent({ data }) {
 
   const angle = -180 - data[0].value * 3.6;
 
+  /**
+   * Composant de Légende personnalisée pour le graphique en secteurs.
+   *
+   * @returns {JSX.Element} Le composant de légende personnalisée.
+   */
+
   function CustomLegend() {
     return <p className="legend">Score</p>;
   }
+
+  /**
+   * Composant d'étiquette personnalisée pour le graphique en secteurs.
+   *
+   * @returns {JSX.Element} Le composant d'étiquette personnalisée.
+   */
 
   function CustomisedLabel() {
     return (

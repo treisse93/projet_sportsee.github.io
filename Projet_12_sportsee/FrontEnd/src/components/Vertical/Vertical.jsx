@@ -5,6 +5,13 @@ import musculation from "../../assets/musculation.svg";
 import bicycle from "../../assets/bicycle.svg";
 import swimming from "../../assets/swimming.svg";
 import ActivityButton from "./ActivityButton";
+import PropTypes from "prop-types";
+
+/**
+ * Composant représentant le volet vertical des activités.
+ *
+ * @returns {JSX.Element} Le composant du volet vertical des activités.
+ */
 
 export default function Vertical() {
   const activities = [
@@ -38,3 +45,15 @@ export default function Vertical() {
     </aside>
   );
 }
+
+Vertical.propTypes = {
+  /** Les activités à afficher dans le volet vertical */
+  activities: PropTypes.arrayOf(
+    PropTypes.shape({
+      /** Le nom de l'activité */
+      name: PropTypes.string.isRequired,
+      /** L'URL de l'icône de l'activité */
+      image: PropTypes.string.isRequired,
+    })
+  ),
+};

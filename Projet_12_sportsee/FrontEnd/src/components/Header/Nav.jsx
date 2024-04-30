@@ -2,6 +2,12 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../sass/Components/Header/Nav.scss";
 
+/**
+ * Composant représentant la barre de navigation de l'application.
+ *
+ * @returns {JSX.Element} Composant de la barre de navigation.
+ */
+
 export default function Nav() {
   return (
     <nav className="nav">
@@ -20,3 +26,7 @@ export default function Nav() {
     </nav>
   );
 }
+
+Nav.propTypes = {
+  // Aucune prop n'est requise pour ce composant.
+};

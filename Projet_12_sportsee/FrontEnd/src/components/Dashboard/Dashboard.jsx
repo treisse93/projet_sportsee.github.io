@@ -10,6 +10,12 @@ import PieChartComponent from "./PieChart.jsx";
 import { ResponsiveContainer } from "recharts";
 import "../../sass/Components/Dashboard/Dashboard.scss";
 
+/**
+ * Composant représentant le tableau de bord
+ * @param {object} props - Les props du composant
+ * @param {string} props.id - L'identifiant de l'utilisateur
+ * @returns {JSX.Element} Composant du tableau de bord
+ */
 export default function Dashboard({ id }) {
   const type = "mock";
   const [profil, setProfil] = useState({});

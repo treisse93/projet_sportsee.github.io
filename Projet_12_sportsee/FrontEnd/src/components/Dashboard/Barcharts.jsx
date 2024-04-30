@@ -13,6 +13,13 @@ import {
   ReferenceLine,
 } from "recharts";
 
+/**
+ * Composant représentant un conteneur de graphique en barres
+ * @param {object} props - Les props du composant
+ * @param {Array<object>} props.activities - Les données d'activité pour le graphique
+ * @returns {JSX.Element} Composant du conteneur de graphique en barres
+ */
+
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -168,3 +175,16 @@ export default function BarchartContainer({ activities }) {
     </ResponsiveContainer>
   );
 }
+
+BarchartContainer.propTypes = {
+  /**
+   * Les données d'activité pour le graphique
+   */
+  activities: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.string.isRequired,
+      kilogram: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

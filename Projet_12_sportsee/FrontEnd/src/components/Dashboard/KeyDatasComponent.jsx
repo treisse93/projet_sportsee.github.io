@@ -2,6 +2,12 @@ import React from "react";
 import "../../sass/Components/Dashboard/KeyDatasComponent.scss";
 import PropTypes from "prop-types";
 
+/**
+ * Composant représentant les données clés
+ * @param {object} props - Les props du composant
+ * @param {Array} props.data - Les données clés à afficher
+ * @returns {JSX.Element} Composant des données clés
+ */
 export default function KeyDatasComponent({ data }) {
   if (data !== undefined) {
     return (

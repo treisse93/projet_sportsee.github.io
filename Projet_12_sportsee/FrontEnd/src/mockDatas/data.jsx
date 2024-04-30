@@ -1,3 +1,19 @@
+/**
+ * Données principales des utilisateurs
+ * @typedef {Object} UserMainData
+ * @property {number} id - L'identifiant de l'utilisateur
+ * @property {object} userInfos - Informations sur l'utilisateur
+ * @property {string} userInfos.firstName - Le prénom de l'utilisateur
+ * @property {string} userInfos.lastName - Le nom de l'utilisateur
+ * @property {number} userInfos.age - L'âge de l'utilisateur
+ * @property {number} [todayScore] - Le score de l'utilisateur pour aujourd'hui
+ * @property {object} keyData - Données clés de l'utilisateur
+ * @property {number} keyData.calorieCount - Le nombre de calories
+ * @property {number} keyData.proteinCount - Le nombre de protéines
+ * @property {number} keyData.carbohydrateCount - Le nombre de glucides
+ * @property {number} keyData.lipidCount - Le nombre de lipides
+ */
+
 const USER_MAIN_DATA = [
   {
     id: 12,

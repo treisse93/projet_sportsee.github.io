@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import "../sass/Components//WelcomeContainer.scss";
 import PropTypes from "prop-types";
 
+/**
+ * Composant représentant un conteneur de bienvenue
+ * @param {object} props - Les props du composant
+ * @param {string} props.firstName - Le prénom de l'utilisateur
+ * @returns {JSX.Element} Composant du conteneur de bienvenue
+ */
 export default function WelcomeContainer({ firstName }) {
   return (
     <div className="welcomeContainer">
