@@ -22,7 +22,7 @@ export default function RadarCharts({ data }) {
   return (
     <ResponsiveContainer
       className="radarContainer"
-      width="30%"
+      width="100%"
       height="100%"
       aspect={1}
     >
