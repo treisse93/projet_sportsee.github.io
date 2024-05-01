@@ -16,6 +16,7 @@ export default function KeyDatasComponent({ data }) {
           return (
             <article key={Math.random()} className="keyData">
               <img
+                // insertion icone avec attribut selon nom de l'icône
                 className="keyDataIcon"
                 src={keyData.icon}
                 alt={`${keyData.type} icone`}
@@ -27,10 +28,12 @@ export default function KeyDatasComponent({ data }) {
                     ? parseFloat(
                         keyData.value.replace(",", ",")
                       ).toLocaleString()
-                    : keyData.value.toLocaleString()}{""}
+                    : keyData.value.toLocaleString()}
+                  {""}
                   {keyData.unit}
                 </p>
                 <p className="keyDataName">
+                  {/* Formater les valeurs */}
                   {keyData.type === "caloriesCount"
                     ? "Calories"
                     : keyData.type === "proteinCount"
