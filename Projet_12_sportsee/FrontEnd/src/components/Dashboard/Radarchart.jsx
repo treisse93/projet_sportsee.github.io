@@ -34,7 +34,9 @@ export default function RadarCharts({ data }) {
         data={data}
         outerRadius="65%"
       >
-        <PolarGrid className="axis" gridType="polygon" radialLines={false} />
+        <PolarGrid 
+        // affichage de la grille "rouge"
+        className="axis" gridType="polygon" radialLines={false} />
         <PolarAngleAxis
           dataKey="kind"
           domain={["datamin", "datamax"]}
