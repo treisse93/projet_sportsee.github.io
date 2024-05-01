@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../sass/Components/Dashboard/Barcharts.scss";
 import PropTypes from "prop-types";
 import {
@@ -10,7 +10,6 @@ import {
   Legend,
   CartesianGrid,
   ResponsiveContainer,
-  ReferenceLine,
 } from "recharts";
 
 /**
@@ -122,6 +121,7 @@ export default function BarchartContainer({ activities }) {
         />
         <XAxis dataKey="day" tickSize={0} tickMargin={10} />
         <YAxis
+          // maj représentation graph kg (écart-type).
           dataKey="kilogram"
           hide={false}
           yAxisId="kg"
@@ -134,6 +134,7 @@ export default function BarchartContainer({ activities }) {
           allowDecimals={true}
         />
         <YAxis
+          // maj représentation graph calories (écart-type)
           dataKey="calories"
           hide={true}
           id="cal"
@@ -145,12 +146,14 @@ export default function BarchartContainer({ activities }) {
         <Tooltip content={<CustomTooltip className="customTooltip" />} />
 
         <Legend
+          // légende présente en haut du graph
           content={<CustomLegend />}
           verticalAlign="top"
           align="right"
-          margin={{ top: 10, right: 20, bottom: 50, left: 50 }}
+          margin={{ top: 50, right: 20, bottom: 50, left: 50 }}
         />
         <Bar
+          // personnalisation barres représentant les kg
           name="Poids (kg)"
           dataKey="kilogram"
           radius={[20, 20, 0, 0]}
@@ -162,6 +165,7 @@ export default function BarchartContainer({ activities }) {
           margin={{ top: 10 }}
         />
         <Bar
+          // personnalisation barres représentant les calories
           name="Calories brulées (kCal)"
           dataKey="calories"
           fill="red"
