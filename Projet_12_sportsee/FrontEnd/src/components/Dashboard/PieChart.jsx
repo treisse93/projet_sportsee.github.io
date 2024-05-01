@@ -25,7 +25,7 @@ export default function PieChartComponent({ data }) {
    */
 
   function CustomLegend() {
-    return <p className="legend">Score</p>;
+    return <p className="legendGraphPiechart">Score</p>;
   }
 
   /**
@@ -53,7 +53,16 @@ export default function PieChartComponent({ data }) {
           dominantBaseline="bottom"
           className="labelText"
         >
-          de votre objectif
+          de votre
+        </text>
+        <text
+          x="50%"
+          y="70%"
+          textAnchor="middle"
+          dominantBaseline="bottom"
+          className="labelText"
+        >
+          objectif
         </text>
       </>
     );
