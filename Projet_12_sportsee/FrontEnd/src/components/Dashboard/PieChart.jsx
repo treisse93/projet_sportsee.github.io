@@ -72,6 +72,7 @@ export default function PieChartComponent({ data }) {
     <ResponsiveContainer className="pieChartComponent">
       <PieChart className="pieChartComponent__radar">
         <Pie
+        // affichage du graph
           className="bar"
           data={data}
           dataKey="value"
@@ -87,6 +88,7 @@ export default function PieChartComponent({ data }) {
         />
 
         <Pie
+        // affichage du score
           cx="50%"
           cy="50%"
           className="scoringText"
@@ -105,6 +107,7 @@ export default function PieChartComponent({ data }) {
           />
         </Pie>
         <Legend
+        // affichage de la légende "score"
           className="legendPiechart"
           iconSize={0}
           align="left"
