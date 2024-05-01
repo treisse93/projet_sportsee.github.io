@@ -6,6 +6,9 @@
   max-width: 158px;
   max-height: 158px;
   margin: 0 10px;
+  & tspan {
+    fill: #ffffff;
+  }
   &__container {
     flex-grow: 1;
     display: flex;
@@ -51,8 +54,4 @@
 
 .linechart__rectangle {
   top: -10px;
-}
-
-tspan {
-  fill: #ffffff;
 }
