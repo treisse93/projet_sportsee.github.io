@@ -27,7 +27,7 @@ export default function KeyDatasComponent({ data }) {
                     ? parseFloat(
                         keyData.value.replace(",", ",")
                       ).toLocaleString()
-                    : keyData.value.toLocaleString()}{" "}
+                    : keyData.value.toLocaleString()}{""}
                   {keyData.unit}
                 </p>
                 <p className="keyDataName">
