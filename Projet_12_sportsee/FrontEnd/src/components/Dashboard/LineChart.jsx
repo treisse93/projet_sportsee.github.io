@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   LineChart,
   Line,
@@ -61,10 +61,11 @@ function CustomCursor(payload) {
   const { points } = payload;
   const { x } = points[0];
   return (
+    // Ajuste le rectangle de fond qui s'affiche lorsque l'on passe dessus
     <Rectangle
       className="linechart__rectangle"
       x={x}
-      y={0}
+      y={-10}
       width={500}
       height={500}
       fill="rgba(0, 0, 0, 0.2)"
@@ -82,6 +83,7 @@ function CustomCursor(payload) {
 
 function CustomLegend({ payload }) {
   return (
+    // Légende affichée au dessus du grpahique
     <div className="legend">
       {payload.map(() => {
         return (
@@ -121,11 +123,12 @@ export default function LineChartComponent({ data }) {
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       >
         <XAxis
+          // ajuster légende jours
           type="category"
           dataKey="day"
           stroke="white"
           tickSize={0}
-          tick={{ fontSize: "1.5vh", opacity: 0.5 }}
+          tick={{ fontSize: "1.5vh", opacity: 0.7 }}
           tickMargin={5}
           tickLine={false}
           axisLine={false}
@@ -139,6 +142,7 @@ export default function LineChartComponent({ data }) {
           domain={["dataMin-10", "dataMax + 20"]}
         />
         <Line
+          // ajuster taille et hauteur courbe
           className="linechartComponent__container__line"
           dataKey="sessionLength"
           type="natural"

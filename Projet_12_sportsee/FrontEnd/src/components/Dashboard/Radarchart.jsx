@@ -20,13 +20,14 @@ import {
 
 export default function RadarCharts({ data }) {
   return (
+    //container principal
     <ResponsiveContainer
       className="radarContainer"
       width="100%"
       height="100%"
       aspect={1}
     >
-      <RadarChart
+      <RadarChart // graphique
         className="radarChart"
         cx="50%"
         cy="50%"
