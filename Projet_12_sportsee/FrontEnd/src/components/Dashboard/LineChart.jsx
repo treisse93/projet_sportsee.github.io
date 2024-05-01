@@ -111,13 +111,14 @@ CustomLegend.propTypes = {
 export default function LineChartComponent({ data }) {
   const [tooltipPayload, setTooltipPayload] = useState([]);
   return (
+    // container principal
     <ResponsiveContainer
       className="linechartComponent"
       width="100%"
       height="100%"
       aspect={1}
     >
-      <LineChart
+      <LineChart // container du graph
         className="linechartComponent__container"
         data={data}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
@@ -153,8 +154,10 @@ export default function LineChartComponent({ data }) {
           cursor={<CustomCursor />}
         />
         <defs>
-          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop
+          <linearGradient 
+          //lienarGradient de la courbe
+          id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop 
               offset="0%"
               style={{ stopColor: "rgba(255, 255, 255, 0.21)", stopOpacity: 1 }}
             />
@@ -167,6 +170,7 @@ export default function LineChartComponent({ data }) {
           content={<CustomLegend payload={data} />}
         />
         <Tooltip
+        //affichage lors du hover
           content={(props) => <CustomTooltip {...props} />}
           cursor={<CustomCursor />}
           payload={tooltipPayload}
